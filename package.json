@@ -1,0 +1,49 @@
+{
+  "name": "storybook-addon-algolia-mock",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "repository": "git@github.com:alexandrebodin/storybook-addon-algolia-mock.git",
+  "author": "Alexandre BODIN <bodin.alex@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel src -d dist",
+    "build:dev": "babel src -d dist -w",
+    "storybook": "start-storybook -p 9009 -c ./example/.storybook",
+    "lint:js": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest __tests__",
+    "test:dev": "jest __tests__ --watch",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.4",
+    "@storybook/addon-knobs": "^3.4.4",
+    "@storybook/addon-storyshots": "^3.4.4",
+    "@storybook/addons": "^3.4.4",
+    "@storybook/react": "^3.4.4",
+    "babel-cli": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
+    "jest": "20.0.4",
+    "prettier": "^1.12.1",
+    "rimraf": "2.6.1"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "lunr": "^2.3.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-instantsearch-dom": "^5.2.2"
+  }
+}
